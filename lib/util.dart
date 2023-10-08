@@ -1,9 +1,4 @@
 
-
- // List<Map<dynamic, dynamic>> user_List=[];
- // Resume myResume=Resume();
-// u_detail detail=u_detail();
-
  import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
@@ -44,8 +39,7 @@ class u_detail{
   print("email $email");
   print("phone $phone");
   print("address1 $address1");
-  // print("address2 $address2");
-  // print("address3 $address3");
+
  }
 
 }

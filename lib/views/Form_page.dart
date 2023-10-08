@@ -33,9 +33,6 @@ class _ContactInfoState extends State<form_page> {
 
   final ImagePicker picker = ImagePicker();
 
-  // String? filePath;
-  // XFile? xFile;
-
   void _addUser() {
     final String fname = nameController.text;
     final String lname = lnameController.text;
@@ -66,18 +63,6 @@ class _ContactInfoState extends State<form_page> {
       Navigator.pushNamed(context, user_detail);
     }
   }
-
-  // @override
-  // void initState() {
-  //   // nameController.text="Ravi";
-  //   // emailController.text="ravi007@gmail.com";
-  //   // phoneController.text="9898989898";
-  //   // addressController.text="150 ring";
-  //   // address1Controller.text="raj";
-  //   // address2Controller.text="ind";
-  //
-  //   super.initState();
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -163,11 +148,7 @@ class _ContactInfoState extends State<form_page> {
                             onFieldSubmitted: (value) {
                               print("onFieldSubmitted $value");
                             },
-                            // controller: nameController,
-                            // onChanged: (value) {
-                            //   name = value;
-                            //   print(value);
-                            // },
+
                             onSaved: (newValue) {
                               print("On Save $newValue");
                               name = newValue ?? "";
@@ -271,7 +252,7 @@ class _ContactInfoState extends State<form_page> {
                               }
                             },
                             decoration: InputDecoration(
-                              hintText: "Phone",
+
                               border: OutlineInputBorder(),
                               labelText: 'Enter Number',
                               // prefix: Icon(Icons.phone_android),
@@ -403,7 +384,7 @@ class _ContactInfoState extends State<form_page> {
                                 print("Invalid");
                               }
                             },
-                            child: Text("Save")),
+                            child: Text("Login")),
                         SizedBox(
                           width: 15,
                         ),
@@ -427,69 +408,7 @@ class _ContactInfoState extends State<form_page> {
                     )
 
 
-                    // Row(
-                    //   mainAxisSize: MainAxisSize.min,
-                    //   children: [
-                    //     ElevatedButton(
-                    //         onPressed: () {
-                    //           if (formKey.currentState?.validate() ?? false) {
-                    //             FocusScope.of(context)
-                    //                 .unfocus(); // For keyboard Close
-                    //             formKey.currentState?.save();
-                    //             ScaffoldMessenger.of(context)
-                    //                 .showSnackBar(SnackBar(
-                    //               content: Text("Save Successfully"),
-                    //               duration: Duration(seconds: 3),
-                    //               backgroundColor: Colors.red,
-                    //               action: SnackBarAction(
-                    //                 label: "Send",
-                    //                 onPressed: () {},
-                    //               ),
-                    //             ));
-                    //             detail.name = nameController.text;
-                    //             detail.email = emailController.text;
-                    //             detail.phone = phoneController.text;
-                    //             detail.address1 = addressController.text;
-                    //             // resume.address2=address1Controller.text;
-                    //             // resume.address3=address2Controller.text;
-                    //             detail.xFile = xFile as String?;
-                    //             Navigator.pushNamed(context, user_detail,
-                    //                 arguments: detail);
-                    //             // Navigator.pushNamed(context, user_detail);
-                    //             user_List.add(
-                    //               detail.name
-                    //             );
-                    //             // user_List.add(
-                    //             //   detail.email,
-                    //             // );
-                    //
-                    //             setState(() {});
-                    //
-                    //             print("Save $name");
-                    //           } else {
-                    //             print("Invalid");
-                    //           }
-                    //         },
-                    //         child: Text("Save")),
-                    //     SizedBox(
-                    //       width: 15,
-                    //     ),
-                    //     ElevatedButton(
-                    //         onPressed: () {
-                    //           print("Reset");
-                    //           // nameController.clear();
-                    //           // emailController.clear();
-                    //           // phoneController.text = "";
-                    //           // addressController.text = "";
-                    //           // address1Controller.text = "";
-                    //           // address2Controller.text = "";
-                    //           formKey.currentState?.reset();
-                    //           FocusScope.of(context)
-                    //               .unfocus(); // For keyboard Close
-                    //         },
-                    //         child: Text("Reset")),
-                    //   ],
-                    // )
+
                   ],
                 ),
               ),
