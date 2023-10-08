@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
             color: Colors.white
         ),
         child: Center(
-          child: Image.asset("Image/form.png",height: 300,width: 400),
+          child: Image.asset("Image/form.png",height: 250,width: 350),
         ),
       ),
     );

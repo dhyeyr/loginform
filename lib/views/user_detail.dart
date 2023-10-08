@@ -97,7 +97,7 @@ class _UserListScreenState extends State<UserListScreen> {
                     boxShadow: [BoxShadow(blurRadius: 10)]),
                 child: ListTile(
                   title: Padding(
-                    padding: const EdgeInsets.only(left: 35),
+                    padding: const EdgeInsets.only(left: 25),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -174,31 +174,31 @@ class _UserListScreenState extends State<UserListScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 130),
+                padding: const EdgeInsets.only(top: 150),
                 child: Row(
                   children: [
                     SizedBox(
-                      width: 300,
+                      width: 280,
                     ),
                     InkWell(
                         onTap: () {
                           Share.share(user.name ?? "");
                         },
-                        child: Icon(Icons.share)),
+                        child: Icon(Icons.share,size: 18,)),
                     SizedBox(width: 20),
                     InkWell(
                       onTap: () {
                         favoritList.add(user_List[index]);
                       },
-                      child: Icon(Icons.favorite_border_outlined)
+                      child: Icon(Icons.favorite_border_outlined,size: 18,)
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 330, top: 15),
+                padding: const EdgeInsets.only(left: 310, top: 15),
                 child: IconButton(
-                  icon: Icon(Icons.delete, size: 25),
+                  icon: Icon(Icons.delete, size: 20),
                   onPressed: () {
                     showDialog(
                       context: context,
