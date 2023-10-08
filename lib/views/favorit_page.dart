@@ -28,11 +28,10 @@ class _FavoriteUserState extends State<FavoriteUser> {
       ),
 
 
-
       body: ListView.builder(
-        itemCount: user_List.length,
+        itemCount: favoritList.length,
         itemBuilder: (context, index) {
-          final user = user_List[index];
+          final user = favoritList[index];
           return Stack(
             children: [
               Container(
